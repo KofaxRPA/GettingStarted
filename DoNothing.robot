@@ -46,13 +46,23 @@
   <property name="transitionGraph" class="Body">
     <blockBeginStep class="BlockBeginStep" id="1"/>
     <steps class="ArrayList">
-      <object class="End" id="2"/>
+      <object class="BranchPoint" id="2"/>
+      <object class="End" id="3"/>
+      <object class="End" id="4"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
       <object class="TransitionEdge">
         <from idref="1"/>
         <to idref="2"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="3"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="2"/>
+        <to idref="4"/>
       </object>
     </edges>
   </property>
